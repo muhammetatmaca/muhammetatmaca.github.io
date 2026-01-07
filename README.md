@@ -1,1 +1,0 @@
-# muhammetatmaca.github.io
