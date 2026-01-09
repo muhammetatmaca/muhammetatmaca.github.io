@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GürültüMetre - Gizlilik Politikası</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Audiowide&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --secondary: #FFD93D;
+            --dark: #1A1A2E;
+            --light: #F8F9FA;
+            --text: #333;
+            --text-light: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            font-family: 'Audiowide', cursive;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin: 30px 0 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        ul {
+            margin: 0 0 20px 25px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .lang-switch button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+            background: #eee;
+        }
+
+        .lang-switch button.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .english {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">GürültüMetre</div>
+            <div class="lang-switch">
+                <button id="btn-tr" class="active" onclick="switchLang('tr')">Türkçe</button>
+                <button id="btn-en" onclick="switchLang('en')">English</button>
+            </div>
+        </header>
+
+        <div id="content-tr" class="turkish">
+            <h1>Gizlilik Politikası</h1>
+            <p>GürültüMetre uygulaması ("biz", "uygulama"), kullanıcılarımızın gizliliğine önem vermektedir. Bu gizlilik
+                politikası, uygulamamızın hangi verileri ne amaçla kullandığını açıklamaktadır.</p>
+
+            <h2>1. Bilgi Toplama ve Kullanım</h2>
+            <p>GürültüMetre, temel işlevini yerine getirmek için cihazınızın mikrofonuna erişim gerektirir. Ancak:</p>
+            <ul>
+                <li><strong>Ses Verileri:</strong> Mikrofon aracılığıyla alınan ses verileri anlık olarak desibel
+                    seviyesini hesaplamak için kullanılır. Bu veriler hiçbir şekilde kaydedilmez, dinlenmez veya
+                    sunucularımıza yüklenmez.</li>
+                <li><strong>Yerel Veriler:</strong> Eğer kullanıcı "kayıt" özelliğini kullanırsa, desibel seviyesi
+                    istatistikleri (min, max, ortalama ve tarih) sadece kullanıcının kendi cihazında saklanır.</li>
+            </ul>
+
+            <h2>2. İzinler</h2>
+            <p>Uygulamamız aşağıdaki izinleri gerektirebilir:</p>
+            <ul>
+                <li><strong>Mikrofon (RECORD_AUDIO):</strong> Ses seviyesini ölçmek için zorunludur.</li>
+                <li><strong>Depolama:</strong> Ölçüm geçmişini cihazınıza kaydetmek için kullanılır.</li>
+            </ul>
+
+            <h2>3. Veri Paylaşımı</h2>
+            <p>Toplanan veya işlenen hiçbir veri üçüncü taraf şahıslarla veya kurumlarla paylaşılmamaktadır. Uygulama
+                tamamen çevrimdışı (offline) çalışabilir yapıdadır.</p>
+
+            <h2>4. Çocukların Gizliliği</h2>
+            <p>Uygulamamız 13 yaş altı çocuklardan bilerek kişisel veri toplamaz. Uygulama bir ölçüm aracıdır ve
+                herhangi bir kişisel profil oluşturma özelliği içermez.</p>
+
+            <h2>5. İletişim</h2>
+            <p>Bu gizlilik politikası hakkında sorularınız varsa bizimle iletişime geçebilirsiniz:</p>
+            <p><strong>Email:</strong> support@virelonsoft.com</p>
+        </div>
+
+        <div id="content-en" class="english">
+            <h1>Privacy Policy</h1>
+            <p>GürültüMetre application ("we", "the app"), values the privacy of our users. This privacy policy explains
+                what data our application uses and for what purpose.</p>
+
+            <h2>1. Information Collection and Use</h2>
+            <p>GürültüMetre requires access to your device's microphone to perform its primary function. However:</p>
+            <ul>
+                <li><strong>Audio Data:</strong> Audio data received through the microphone is used instantly to
+                    calculate the decibel level. This data is not recorded, listened to, or uploaded to our servers in
+                    any way.</li>
+                <li><strong>Local Data:</strong> If the user uses the "save" feature, decibel level statistics (min,
+                    max, average, and date) are stored only on the user's own device.</li>
+            </ul>
+
+            <h2>2. Permissions</h2>
+            <p>Our application may require the following permissions:</p>
+            <ul>
+                <li><strong>Microphone (RECORD_AUDIO):</strong> Mandatory for measuring sound level.</li>
+                <li><strong>Storage:</strong> Used to save measurement history on your device.</li>
+            </ul>
+
+            <h2>3. Data Sharing</h2>
+            <p>No data collected or processed is shared with third parties or institutions. The application is designed
+                to function entirely offline.</p>
+
+            <h2>4. Children's Privacy</h2>
+            <p>Our application does not knowingly collect personal data from children under 13. The application is a
+                measurement tool and does not include any personal profiling features.</p>
+
+            <h2>5. Contact</h2>
+            <p>If you have questions about this privacy policy, you can contact us:</p>
+            <p><strong>Email:</strong> support@virelonsoft.com</p>
+        </div>
+
+        <footer>
+            &copy; 2026 VirelonSoft - GürültüMetre. Tüm hakları saklıdır.
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const contentTr = document.getElementById('content-tr');
+            const contentEn = document.getElementById('content-en');
+            const btnTr = document.getElementById('btn-tr');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'tr') {
+                contentTr.style.display = 'block';
+                contentEn.style.display = 'none';
+                btnTr.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                contentTr.style.display = 'none';
+                contentEn.style.display = 'block';
+                btnTr.classList.remove('active');
+                btnEn.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
