@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pixel Weave Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E040FB;
+            --secondary: #7C4DFF;
+            --bg: #0D0D1A;
+            --card-bg: rgba(26, 26, 46, 0.9);
+            --text: #FFFFFF;
+            --text-dim: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Pixel Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 2px 2px, rgba(224, 64, 251, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(124, 77, 255, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(224, 64, 251, 0.3));
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Pixel Corners */
+        .card::before,
+        .card::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 4px solid var(--primary);
+        }
+
+        .card::before {
+            top: -2px;
+            left: -2px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .card::after {
+            bottom: -2px;
+            right: -2px;
+            border-left: none;
+            border-top: none;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 40px 0 20px 0;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        h2::before {
+            content: "🧶";
+            margin-right: 15px;
+            font-size: 1.4rem;
+        }
+
+        p,
+        ul {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "■";
+            color: var(--secondary);
+            position: absolute;
+            left: -20px;
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--secondary);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary);
+            border-bottom-style: solid;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .company-name {
+            font-weight: 900;
+            color: var(--text);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .last-updated {
+            margin-bottom: 30px;
+            font-style: italic;
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+
+        /* Decorative Pixel Art Elements */
+        .pixel-decor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            box-shadow: 15px 0 var(--secondary), -15px 0 var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .glow {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow" style="top: 10%; left: 5%;"></div>
+    <div class="glow" style="bottom: 10%; right: 5%;"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Pixel Weave</h1>
+            <p>ART OF THREADS</p>
+        </div>
+
+        <div class="card">
+            <div class="last-updated">Last Updated: January 13, 2026</div>
+
+            <p>Welcome to <strong>Pixel Weave Game</strong>. This Privacy Policy outlines how
+                <strong>VirelonSoft</strong> ("Company", "we", "us", or "our") manages and protects the data of our
+                users. By choosing to play Pixel Weave, you agree to the practices described in this policy.</p>
+
+            <h2>1. Information Architecture</h2>
+            <p>At VirelonSoft, we value your privacy. We do not collect personal identifiers such as names, email
+                addresses, or phone numbers. Our data architecture is designed around the local device experience.</p>
+            <p>Automatically processed data includes:</p>
+            <ul>
+                <li>Device Advertising Identifiers (Google Advertising ID).</li>
+                <li>In-game progression telemetry (level completion, accuracy scores).</li>
+                <li>Technical metadata (device model, OS version).</li>
+            </ul>
+
+            <h2>2. Integrated Core Services</h2>
+            <p>Our application integrates specific third-party frameworks to ensure a premium gaming experience:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Facilitates rewarded and interstitial advertisements. They may
+                    process your AD_ID to tailor content.
+                    <a href="https://policies.google.com/privacy" target="_blank">View Policy</a>
+                </li>
+                <li><strong>Unity Engine:</strong> Powering the weaving mechanics. Unity collects hardware identifiers
+                    for optimization.
+                    <a href="https://unity3d.com/legal/privacy-policy" target="_blank">View Policy</a>
+                </li>
+            </ul>
+
+            <h2>3. Local Data Sovereignty</h2>
+            <p>All weaving patterns, stars earned, and game progress are stored exclusively on your device. VirelonSoft
+                does not maintain a central server to store your personal gameplay data.</p>
+
+            <h2>4. Children's Safety Protocol</h2>
+            <p>Our game is designed with a safe environment in mind. We do not knowingly collect information from
+                children under 13. Pixel Weave is a creativity-focused experience suitable for a wide audience while
+                strictly adhering to COPPA-related guidelines.</p>
+
+            <h2>5. Advertising Permissions (AD_ID)</h2>
+            <p>Pixel Weave Game utilizes the <code>com.google.android.gms.permission.AD_ID</code> to enable AdMob reward
+                tracking, ensuring you get your hints correctly after watching rewarded content.</p>
+
+            <h2>6. Sovereignty & Changes</h2>
+            <p>We reserve the right to refine this policy. Any updates will be reflected here immediately. Continued use
+                of the "Pixel Weave" threads signifies your acceptance of these terms.</p>
+
+            <h2>7. Connect with VirelonSoft</h2>
+            <p>Questions regarding the threads of our privacy? Reach out to our team:</p>
+            <p><strong style="color: var(--primary);">Email:</strong>muhammetatmaca79@gmail.com</p>
+        </div>
+
+        <div class="footer">
+            <p class="company-name">VIRELONSOFT</p>
+            <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">&copy; 2026 Crafted with Passion.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Subtle mouse follow glow effect
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelector('.glow');
+            if (glow) {
+                // You could add logic here for more interactivity
+            }
+        });
+    </script>
+</body>
+
+</html>
